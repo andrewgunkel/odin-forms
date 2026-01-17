@@ -1,0 +1,81 @@
+<!--
+
+ /$$      /$$                                     /$$ /$$                              
+| $$$    /$$$                                    | $$|__/                              
+| $$$$  /$$$$  /$$$$$$   /$$$$$$  /$$$$$$$   /$$$$$$$ /$$  /$$$$$$$  /$$$$$$$  /$$$$$$$
+| $$ $$/$$ $$ /$$__  $$ /$$__  $$| $$__  $$ /$$__  $$| $$ /$$_____/ /$$_____/ /$$_____/
+| $$  $$$| $$| $$  \ $$| $$  \ $$| $$  \ $$| $$  | $$| $$|  $$$$$$ | $$      |  $$$$$$ 
+| $$\  $ | $$| $$  | $$| $$  | $$| $$  | $$| $$  | $$| $$ \____  $$| $$       \____  $$
+| $$ \/  | $$|  $$$$$$/|  $$$$$$/| $$  | $$|  $$$$$$$| $$ /$$$$$$$/|  $$$$$$$ /$$$$$$$/
+|__/     |__/ \______/  \______/ |__/  |__/ \_______/|__/|_______/  \_______/|_______/ 
+
+-----------------------------------------------
+  _____ _           ___     _ _        ___          _        _   
+ |_   _| |_  ___   / _ \ __| (_)_ _   | _ \_ _ ___ (_)___ __| |_ 
+   | | | ' \/ -_) | (_) / _` | | ' \  |  _/ '_/ _ \| / -_) _|  _|
+   |_| |_||_\___|  \___/\__,_|_|_||_| |_| |_| \___// \___\__|\__|
+                                                 |__/            
+Project: Sign-up Form
+Link to project brief: https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form
+Author: Andrew Gunkel
+
+---------------------HTML--------------------->
+                                                                                       
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="styles.css">
+		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Limelight' rel='stylesheet' type='text/css'>
+		<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+		<title>Moondiscs - Create Account</title>
+	</head>
+	<body>
+		<main class="container">
+			<div id="left-panel">
+				<span>Photo by Erik Mclean on <a href="https://www.pexels.com/photo/vinyl-records-and-album-covers-7751834/">Pexels</a></span>
+			</div>
+			<div id="right-panel">
+				<div id="logo">
+					<img src="images/favicon.svg" alt="Moondiscs Logo"> 
+					<h2>Moondiscs </h2>
+				</div>
+				<h1>Create your Account</h1>
+				<p>Join <span class="title">Moondiscs</span> today to start receiving your monthly free vinyl records this month!</p>
+				<form action="https://httpbin.org/post" method="post">
+					<div class="form-group">
+						<label for="username">Username </label>
+						<input type="text" id="username" name="username" required placeholder="VinylLover808">
+					</div>
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" id="email" name="email" required placeholder="jane.doe@example.com">
+					</div>
+					<div class="form-group">
+						<label for="first name">First Name</label>
+						<input type="text" id="first name" name="first name" required placeholder="Jane Doe">
+					</div>
+					<div class="form-group">
+						<label for="second name ">Second Name</label>
+						<input type="text" id="second name" name="second name" required placeholder="Jane Doe">
+					</div>
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input type="password" id="password" name="password" required placeholder="••••••••"    >
+					</div>
+					<div class="form-group">
+						<label for="confirm-password">Confirm Password</label>
+						<input type="password" id="confirm-password" name="confirm-password" required placeholder="••••••••">
+					</div>
+					<button type="submit">Create Account</button>
+					<p class ="login-link">
+						Already have an account? <a href="/login">Log in</a>
+					</p>
+				</form>
+			</div>
+		</main>
+	</body>
+</html>

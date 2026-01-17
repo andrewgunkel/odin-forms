@@ -1,0 +1,214 @@
+/**
+
+ /$$      /$$                                     /$$ /$$                              
+| $$$    /$$$                                    | $$|__/                              
+| $$$$  /$$$$  /$$$$$$   /$$$$$$  /$$$$$$$   /$$$$$$$ /$$  /$$$$$$$  /$$$$$$$  /$$$$$$$
+| $$ $$/$$ $$ /$$__  $$ /$$__  $$| $$__  $$ /$$__  $$| $$ /$$_____/ /$$_____/ /$$_____/
+| $$  $$$| $$| $$  \ $$| $$  \ $$| $$  \ $$| $$  | $$| $$|  $$$$$$ | $$      |  $$$$$$ 
+| $$\  $ | $$| $$  | $$| $$  | $$| $$  | $$| $$  | $$| $$ \____  $$| $$       \____  $$
+| $$ \/  | $$|  $$$$$$/|  $$$$$$/| $$  | $$|  $$$$$$$| $$ /$$$$$$$/|  $$$$$$$ /$$$$$$$/
+|__/     |__/ \______/  \______/ |__/  |__/ \_______/|__/|_______/  \_______/|_______/ 
+
+-----------------------------------------------
+  _____ _           ___     _ _        ___          _        _   
+ |_   _| |_  ___   / _ \ __| (_)_ _   | _ \_ _ ___ (_)___ __| |_ 
+   | | | ' \/ -_) | (_) / _` | | ' \  |  _/ '_/ _ \| / -_) _|  _|
+   |_| |_||_\___|  \___/\__,_|_|_||_| |_| |_| \___// \___\__|\__|
+                                                 |__/            
+Project: Sign-up Form
+Link to project brief: https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form
+Author: Andrew Gunkel
+
+---------------------CSS Styles---------------------*/
+
+input,
+button,
+select,
+textarea {
+				font-family: inherit;
+				color: inherit;
+}
+
+form {
+				display: grid;
+				grid-gap: 5px;
+}
+
+.form-group {
+				display: grid;
+				flex-direction: column;
+}
+
+:root {
+				--color-background: var(--color-light);
+				--color-text: var(--color-dark);
+				--color-secondary: var(--color-button-default);
+
+				--color-button-default: #e02b99;
+				--color-button-hover: #eeb601;
+				--color-light: #aac6ca;
+				--color-dark: #152b29;
+				--color-lighter: #c7dbde;
+				--color-error: #cf412b;
+}
+
+body {
+				font-family: "Roboto";
+				color: var(--color-text);
+}
+
+h1 {
+				margin-bottom: -10px;
+				font-size: 1.8rem;
+				text-align: center;
+				font-family: 'Limelight', cursive;
+}
+
+h2 {
+				font-family: 'Limelight', cursive;
+				font-size: 1.5rem;
+}
+
+main {
+
+				width: 70%;
+				display: flex;
+				margin-right: auto;
+				margin-left: auto;
+				align-items: center;
+				border-radius: 15px;
+				overflow: hidden;
+				box-shadow: 10px 10px 20px var(--color-lighter);
+}
+
+#left-panel {
+				width: 50%;
+				height: 900px;
+				background-image: url("images/records.jpg");
+				background-size: cover;
+				background-repeat: no-repeat;
+				position: relative;
+}
+
+#right-panel {
+				width: 50%;
+				height: 900px;
+				background-color: var(--color-background);
+				padding: 50px;
+				box-sizing: border-box;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+}
+
+p {
+				font-size: 1.2rem;
+}
+
+.form-group {
+				background: var(--color-lighter);
+				padding: 10px;
+				box-sizing: border-box;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				font-size: 1rem;
+				border-radius: 6px;
+				border: 2px solid transparent;
+				align-items: center;
+}
+
+.form-group:has(input:user-invalid) {
+				border-color: var(--color-error);
+}
+
+.form-group:has(input:valid) {
+				border-color: #4caf50;
+}
+
+.form-group label {
+				font-size: .8rem;
+				margin-bottom: 8px;
+				color: var(--color-button-default);
+}
+
+.form-group :placeholder-shown {
+				color: var(--color-dark);
+				opacity: 0.9;
+				font-size: 1rem;
+}
+
+input {
+				background: var(--color-lighter);
+				border: 0;
+				height: 20px;
+				font-size: 1rem;
+				outline: none;
+}
+
+.login-link {
+				font-size: 0.9rem;
+				margin-top: 5px;
+				text-align: center;
+}
+
+.login-link a {
+				color: var(--color-secondary);
+				text-decoration: none;
+}
+
+p span .title {
+				color: var(--color-button-default);
+				font-weight: bold;
+}
+
+button {
+				background-color: var(--color-button-default);
+				border: none;
+				color: white;
+				padding: 10px 20px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 1rem;
+				margin-top: 5px;
+				cursor: pointer;
+				transition-duration: 0.4s;
+				border-radius: 6px;
+}
+
+button:hover {
+				background-color: var(--color-button-hover);
+}
+
+#logo {
+				font-size: 1.5rem;
+				font-weight: bold;
+				color: var(--color-button-default);
+				display: flex;
+				align-items: center;
+				margin-bottom: -20px;
+				justify-content: right;
+}
+
+#logo img {
+				width: 30px;
+				height: 30px;
+				margin-right: 10px;
+				align-items: center;
+}
+
+#left-panel span {
+				position: absolute;
+				bottom: 15px;
+				left: 50%;
+				transform: translateX(-50%);
+				font-size: 0.8rem;
+				color: white;
+				text-align: center;
+				opacity: 0.85;
+}
+
+#left-panel a {
+				color: white;
+				text-decoration: underline;
+}
